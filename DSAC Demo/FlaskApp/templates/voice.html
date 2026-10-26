@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>Speech Test</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+        <h1>Speech Test</h1>
+        <p>Press the button then say something.</p>
+
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="inpResult">Input</label>
+                        <input id="inpResult" type="text" class="form-control form-control-lg" />
+                    </div>
+                    <button id="btnTest" class="btn btn-outline-dark btn-lg">🎤</button>
+                </form>                                   
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                    <label for="inpDebug">Debug Messages</label>
+                    <input id="inpDebug" type="text" class="form-control form-control-lg" />
+                </div>
+                <button id="btnSpeak" class="btn btn-outline-dark btn-lg">🔊</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+
+        var voices = [];
+
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = populateVoiceList;
+        }
+
+        function populateVoiceList() {
+            voices = speechSynthesis.getVoices();
+        }
+        
+        var resultElem = document.querySelector('#inpResult');
+        var testBtn = document.querySelector('#btnTest');
+        var debugElem = document.querySelector('#inpDebug');
+        var speakBtn = document.querySelector('#btnSpeak');
+        var voiceSelect = document.querySelector('select');
+
+        var recognition = new SpeechRecognition();
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        recognition.onresult = function(event) {
+            var speechResult = event.results[0][0].transcript;
+            debugElem.value = 'Speech received. Confidence: ' + event.results[0][0].confidence;
+            resultElem.value = speechResult;
+        }
+
+        recognition.onspeechend = function() {
+            recognition.stop();
+            testBtn.disabled = false;
+        }
+
+        recognition.onerror = function(event) {
+            testBtn.disabled = false;
+            debugElem.value = 'Error occurred in recognition: ' + event.error;
+        }
+        
+        function testSpeech() {
+            testBtn.disabled = true;
+            resultElem.value = '...';
+            debugElem.value = '...diagnostic messages';
+            recognition.start();
+        }
+
+        function testSpeak() {
+            if (speechSynthesis.speaking) {
+                speechSynthesis.cancel();
+            } else {
+                var utterThis = new SpeechSynthesisUtterance(debugElem.value);
+                utterThis.voice = voices.find(v => v.name == 'Samantha') || voices.find(v => v.lang == 'en-US');
+                utterThis.pitch = 1;
+                utterThis.rate = 1;
+                utterThis.onend = function(event) {
+                    speakBtn.classList.remove('active')
+                }
+                speakBtn.classList.add('active')
+                speechSynthesis.speak(utterThis);
+            }
+        }
+
+        testBtn.addEventListener('click', testSpeech);
+        speakBtn.addEventListener('click', testSpeak);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Natural Language Mashup</title>
+    <link href="./static/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./static/dashboard.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/main.css">
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    
+
+<style>
+  google-map {
+    height: 300px;
+    width: 400px;
+  }
+</style>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">NL Mashup</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="http://localhost:8080/index.html">Overview</a></li>
+            <li><a href="http://localhost:8080/component.html">Component</a></li>
+            <li class="active"><a href="#">API Discovery<span class="sr-only">(current)</span></a></li>
+            
+            <li><a href="/dsource">Ontology extraction</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header"></h1>
+         
+          <div class="jumbotron">
+            <p class="lead"></p>
+                <!-- <form action = "http://localhost:8000/nl" method = "post">
+                     <p>Enter Your Intention:</p>
+                     <p><input type = "text" name = "word" class="form-control form-control-lg"/></p>
+                     <p><input type = "submit" value = "submit" /></p>
+                </form>
+                </br>
+                <form>
+                  <p>Tell us you intention:</p>
+                  <button id="btnTest" class="btn btn-outline-dark btn-lg">🎤</button>
+                  <div class="form-group">
+                        <label for="inpResult">Input</label>
+                        <input id="inpResult" type="text" class="form-control form-control-lg" />
+                  </div>
+                </form> -->
+                <form id="testForm" action = "http://localhost:8000/getinput" method = "post">
+                   <div id="chatbox">
+                    <!-- <img src="./static/disco.png" width="100" height="100"> -->
+                    <p class="box sb2"><span>DisCo: Hi! Give me a brife description of your intended Web Service <br></span></p>
+                  
+                    </div>
+                    <div id="userInput" class="row">
+                                
+                     <input id="testinput" type="text" name="msg" placeholder="Your Answer" class="form-control inputClass" >
+                     <button type="submit" id="sendTest" class="btn btn-warning inputBtn">Send</button>
+                                 
+                    </div>
+                </form>
+          <table class="table table-striped" style="margin-left:auto">
+          <thead id = "row">
+            <tr >
+              <th scope="col">Domain</th>
+              <th scope="col">Intended Functionaly</th>
+              
+                <tr >
+                   <td rowspan="5" id = "domain"></td>
+                </tr>
+            </tr>
+             
+          </thead>
+        </table>
+         </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    
+      
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+<script>
+  $(document).ready(function() {
+          $("#testForm").submit(function(event) {
+              var rawText = $("#testinput").val();
+              var userHtml = '<p class="boxuser sb1" ><span>' + rawText + "</span></p>";
+              $("#text").val("");
+              $("#chatbox").append(userHtml);
+              document.getElementById("userInput").scrollIntoView({
+                  block: "start",
+                  behavior: "smooth",
+              });
+              $.ajax({
+                  data: {
+                      msg: rawText,
+                  },
+                  type: "POST",
+                  url: "/getinput",
+              }).done(function(data) {
+                console.log(data);
+                  if (data.includes("&lt")){
+                    
+                    if (data.includes(';')){
+                      var domainText= data.substr(data.indexOf(';'));
+                      domainText = domainText.replace(';',' ');
+                      var dName = domainText.substr(0,domainText.indexOf('&'));
+                      var dSim = domainText.substr(domainText.indexOf('&'));
+                      dSim = dSim.replace('&', ': ');
+                      dSim = "<br>" +"<i>" + "Similarity"+ dSim + "</i>";
+
+                      $("#domain").html(dName);
+                      $("#domain").append($.parseHTML(dSim));
+
+                      var botText = data.substr(data.indexOf(':'), data.indexOf(';'));
+                      botText = botText.substr(0,botText.indexOf(';'));
+                      botText = botText.replace(';',' ');
+                      var botHtml = '<p class = "box sb2" ><span>' + "DisCo: " + botText + "</span></p>";
+                      $("#chatbox").append($.parseHTML(botHtml));
+
+                    }else {
+                      var botText = data.substr(data.indexOf(':'));
+                      botText = botText.replace(':',' ');
+                      var botHtml = '<p class = "box sb2" ><span>' + "DisCo: " + botText + "</span></p>";
+                       $("#chatbox").append($.parseHTML(botHtml));
+                    }
+                    
+
+                    var opText= data.substr(0, data.indexOf(':'));
+                    
+
+                    if (opText.split(')').length-1 > 1){
+                      console.log("more operations")
+
+                      var len = opText.split(')').length;
+                      
+                     
+                      operations = opText.split(')');
+
+                      for (i = 0; i < len-1; i++){
+                        
+                        var op = operations[i];
+                        op= op.replace('(', ' ');
+                        op = op.replace("&gt", '>');
+                        op = op.substr(0, op.indexOf ('>')+1);
+                        op= op.replace('&gt','><br>');
+                        console.log(op);
+                        op = "<tr ><td>"+ op +"</td></tr>";
+                        $("#row").append($.parseHTML(op));
+                        
+                      }
+                    }else {
+                      opText = opText.replace('(', ' ');
+                      opText = opText.replace("&gt", '>');
+                      opText = opText.substr(0, opText.indexOf ('>')+1);
+                      opText= opText.replace('&gt','><br>');
+                      opText = "<tr ><td>"+ opText +"</td></tr>";
+                      $("#row").append($.parseHTML(opText));
+                    }
+
+
+                  }else {
+                    var botHtml = '<p class = "box sb2" ><span>' + "DisCo: " + data + "</span></p>";
+                    $("#chatbox").append($.parseHTML(botHtml));
+
+                  }
+                  document.getElementById("userInput").scrollIntoView({
+                      block: "start",
+                      behavior: "smooth",
+                  });
+              });
+              event.preventDefault();
+              $('#testForm')[0].reset();
+          });
+      });
+
+</script>
+
+
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

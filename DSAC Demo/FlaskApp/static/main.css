@@ -1,0 +1,76 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.box {
+  width: 500px;
+  margin: 30px auto;
+  background: #00bfb6;
+  padding: 20px;
+  text-align: left;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+.sb2:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #00bfb6;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  top: 6px;
+}
+
+.boxuser {
+  width: 500px;
+  margin: 30px auto;
+  background: #479fb3;
+  padding: 20px;
+  text-align: right;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+.sb1:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  text-align: left;
+  border-left: 10px solid #479fb3;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #479fb3;
+  border-bottom: 10px solid transparent;
+  right: -19px;
+  top: 6px;
+}
+
+
+.inputClass{ 
+	width: 500px;
+	position: relative;
+ 	display: block;
+ 	margin : 0 auto;
+ }
+
+.inputBtn{ 
+	width: 200px;
+	position: relative;
+ 	display: block;
+ 	margin : 0 auto;
+ }
+
+
+
