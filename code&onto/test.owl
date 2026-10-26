@@ -1,0 +1,639 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100">
+    <Prefix name="" IRI="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="untitled-ontology-100" IRI="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#"/>
+    <Declaration>
+        <Class IRI="#API"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Content"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Operations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RequestBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Schema"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Servers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContentSchema"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOperations"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutputContent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParameterSchema"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRequestBody"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRequestBodyContent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSchemas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasServer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#referesToSchema"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMethod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPath"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasURL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#outputMediaType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#parameterLocation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#parameterType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#propertyType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#requestBodyMediaType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#schemaType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bank"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PetStore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#category"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#category.id"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#category.name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#findPetByStatus.sId"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#findPetsByStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#findPetsByStatus.response.200"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#findPetsByStatus.status"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#findPetsByTags.output.200"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#get-transactions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#get-transactions-id"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#get-transactions.accountHolderId"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#get-transactions.balancePlatform"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pet.category"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pet.id"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pet.name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pet.photoUrls"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#post-transfers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#updatePet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#updatePet.output.200"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#updatePet.requestBody"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#updatePet.response.200"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#findPetsByTags.output.application/xml"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#petUpdate.output.application/xml"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#updatePet.requestBody.application/json"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#updatePet.requestBody.application/xml"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#API"/>
+        <NamedIndividual IRI="#Bank"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#API"/>
+        <NamedIndividual IRI="#PetStore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Schema"/>
+        <NamedIndividual IRI="#category"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#category.id"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#category.name"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#findPetByStatus.sId"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Operations"/>
+        <NamedIndividual IRI="#findPetsByStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#findPetsByStatus.status"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Output"/>
+        <NamedIndividual IRI="#findPetsByTags.output.200"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Operations"/>
+        <NamedIndividual IRI="#get-transactions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Operations"/>
+        <NamedIndividual IRI="#get-transactions-id"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#get-transactions.accountHolderId"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#get-transactions.balancePlatform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Schema"/>
+        <NamedIndividual IRI="#pet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#pet.category"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#pet.id"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#pet.name"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#pet.photoUrls"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Operations"/>
+        <NamedIndividual IRI="#post-transfers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Operations"/>
+        <NamedIndividual IRI="#updatePet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Output"/>
+        <NamedIndividual IRI="#updatePet.output.200"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RequestBody"/>
+        <NamedIndividual IRI="#updatePet.requestBody"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#API"/>
+        <NamedIndividual IRI="#findPetsByTags.output.application/xml"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Content"/>
+        <NamedIndividual IRI="#findPetsByTags.output.application/xml"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Content"/>
+        <NamedIndividual IRI="#petUpdate.output.application/xml"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Content"/>
+        <NamedIndividual IRI="#updatePet.requestBody.application/json"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Content"/>
+        <NamedIndividual IRI="#updatePet.requestBody.application/xml"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperties"/>
+        <NamedIndividual IRI="#category"/>
+        <NamedIndividual IRI="#category.id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperties"/>
+        <NamedIndividual IRI="#category"/>
+        <NamedIndividual IRI="#category.name"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#findPetsByStatus"/>
+        <NamedIndividual IRI="#findPetByStatus.sId"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#findPetsByStatus"/>
+        <NamedIndividual IRI="#findPetsByStatus.status"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutputContent"/>
+        <NamedIndividual IRI="#findPetsByTags.output.200"/>
+        <NamedIndividual IRI="#findPetsByTags.output.application/xml"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#get-transactions"/>
+        <NamedIndividual IRI="#get-transactions.accountHolderId"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#get-transactions"/>
+        <NamedIndividual IRI="#get-transactions.balancePlatform"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperties"/>
+        <NamedIndividual IRI="#pet"/>
+        <NamedIndividual IRI="#pet.category"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperties"/>
+        <NamedIndividual IRI="#pet"/>
+        <NamedIndividual IRI="#pet.id"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperties"/>
+        <NamedIndividual IRI="#pet"/>
+        <NamedIndividual IRI="#pet.name"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperties"/>
+        <NamedIndividual IRI="#pet"/>
+        <NamedIndividual IRI="#pet.photoUrls"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#referesToSchema"/>
+        <NamedIndividual IRI="#pet.category"/>
+        <NamedIndividual IRI="#category"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#updatePet"/>
+        <NamedIndividual IRI="#updatePet.output.200"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRequestBody"/>
+        <NamedIndividual IRI="#updatePet"/>
+        <NamedIndividual IRI="#updatePet.requestBody"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutputContent"/>
+        <NamedIndividual IRI="#updatePet.output.200"/>
+        <NamedIndividual IRI="#petUpdate.output.application/xml"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRequestBodyContent"/>
+        <NamedIndividual IRI="#updatePet.requestBody"/>
+        <NamedIndividual IRI="#updatePet.requestBody.application/json"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRequestBodyContent"/>
+        <NamedIndividual IRI="#updatePet.requestBody"/>
+        <NamedIndividual IRI="#updatePet.requestBody.application/xml"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSchemas"/>
+        <NamedIndividual IRI="#findPetsByTags.output.application/xml"/>
+        <NamedIndividual IRI="#pet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasContentSchema"/>
+        <NamedIndividual IRI="#updatePet.requestBody.application/json"/>
+        <NamedIndividual IRI="#pet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasContentSchema"/>
+        <NamedIndividual IRI="#updatePet.requestBody.application/xml"/>
+        <NamedIndividual IRI="#pet"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#propertyType"/>
+        <NamedIndividual IRI="#category.id"/>
+        <Literal>Integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#propertyType"/>
+        <NamedIndividual IRI="#category.name"/>
+        <Literal>string</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#parameterType"/>
+        <NamedIndividual IRI="#findPetByStatus.sId"/>
+        <Literal>integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMethod"/>
+        <NamedIndividual IRI="#findPetsByStatus"/>
+        <Literal>get</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPath"/>
+        <NamedIndividual IRI="#findPetsByStatus"/>
+        <Literal>/pet/findByStatus</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#parameterLocation"/>
+        <NamedIndividual IRI="#findPetsByStatus.status"/>
+        <Literal>query</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#parameterType"/>
+        <NamedIndividual IRI="#findPetsByStatus.status"/>
+        <Literal>string</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#parameterType"/>
+        <NamedIndividual IRI="#get-transactions.accountHolderId"/>
+        <Literal>string</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#parameterType"/>
+        <NamedIndividual IRI="#get-transactions.balancePlatform"/>
+        <Literal>string</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#propertyType"/>
+        <NamedIndividual IRI="#pet.id"/>
+        <Literal>Integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#propertyType"/>
+        <NamedIndividual IRI="#pet.name"/>
+        <Literal>string</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#propertyType"/>
+        <NamedIndividual IRI="#pet.photoUrls"/>
+        <Literal>string</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMethod"/>
+        <NamedIndividual IRI="#updatePet"/>
+        <Literal>Put</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPath"/>
+        <NamedIndividual IRI="#updatePet"/>
+        <Literal>/pet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#outputMediaType"/>
+        <NamedIndividual IRI="#petUpdate.output.application/xml"/>
+        <Literal>application/xml</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasRequestBody"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContentSchema"/>
+        <Class IRI="#Content"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOperations"/>
+        <Class IRI="#API"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOutput"/>
+        <Class IRI="#Operations"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOutputContent"/>
+        <Class IRI="#Output"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParameter"/>
+        <Class IRI="#Operations"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParameterSchema"/>
+        <Class IRI="#Parameter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProperties"/>
+        <Class IRI="#Schema"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRequestBody"/>
+        <Class IRI="#Operations"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRequestBodyContent"/>
+        <Class IRI="#RequestBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSchemas"/>
+        <Class IRI="#API"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasServer"/>
+        <Class IRI="#API"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#referesToSchema"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContentSchema"/>
+        <Class IRI="#Schema"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOperations"/>
+        <Class IRI="#Operations"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOutput"/>
+        <Class IRI="#Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOutputContent"/>
+        <Class IRI="#Content"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParameter"/>
+        <Class IRI="#Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParameterSchema"/>
+        <Class IRI="#Schema"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProperties"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRequestBody"/>
+        <Class IRI="#RequestBody"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRequestBodyContent"/>
+        <Class IRI="#Content"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSchemas"/>
+        <Class IRI="#Schema"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasServer"/>
+        <Class IRI="#Servers"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#referesToSchema"/>
+        <Class IRI="#Schema"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#propertyType"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDescription"/>
+        <Class IRI="#Operations"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMethod"/>
+        <Class IRI="#Operations"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPath"/>
+        <Class IRI="#Operations"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasURL"/>
+        <Class IRI="#Servers"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#parameterLocation"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#parameterType"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#propertyType"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#requestBodyMediaType"/>
+        <Class IRI="#RequestBody"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMethod"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPath"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasURL"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#parameterLocation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#propertyType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

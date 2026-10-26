@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#"
+     xml:base="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-100="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasContentSchema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasContentSchema">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasOperations -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasOperations">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#API"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasOutput">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasOutputContent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasOutputContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Output"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasParameter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasParameterSchema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasParameterSchema">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasProperties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasProperties">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasRequestBody -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasRequestBody">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#RequestBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasRequestBodyContent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasRequestBodyContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#RequestBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasSchemas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasSchemas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#API"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasServer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasServer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#API"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Servers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#referesToSchema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#referesToSchema">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasPath -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasPath">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#hasURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Servers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#outputMediaType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#outputMediaType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#parameterLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#parameterLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#parameterType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#parameterType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#propertyType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#propertyType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#requestBodyMediaType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#requestBodyMediaType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#RequestBody"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#schemaType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#schemaType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#API -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#API"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Output -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Output"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#RequestBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#RequestBody"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Servers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Servers"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Bank -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Bank">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#API"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#PetStore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#PetStore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#API"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema"/>
+        <hasProperties rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category.id"/>
+        <hasProperties rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category.name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category.id -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category.id">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+        <propertyType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integer</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category.name -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category.name">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetByStatus.sId -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetByStatus.sId">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+        <parameterType>integer</parameterType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByStatus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByStatus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <hasParameter rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetByStatus.sId"/>
+        <hasParameter rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByStatus.status"/>
+        <hasMethod>get</hasMethod>
+        <hasPath>/pet/findByStatus</hasPath>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByStatus.response.200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByStatus.response.200"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByStatus.status -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByStatus.status">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+        <parameterLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">query</parameterLocation>
+        <parameterType>string</parameterType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByTags.output.200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByTags.output.200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Output"/>
+        <hasOutputContent rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByTags.output.application/xml"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <hasParameter rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions.accountHolderId"/>
+        <hasParameter rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions.balancePlatform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions-id -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions-id">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions.accountHolderId -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions.accountHolderId">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+        <parameterType>string</parameterType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions.balancePlatform -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#get-transactions.balancePlatform">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Parameter"/>
+        <parameterType>string</parameterType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Schema"/>
+        <hasProperties rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.category"/>
+        <hasProperties rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.id"/>
+        <hasProperties rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.name"/>
+        <hasProperties rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.photoUrls"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.category -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.category">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+        <referesToSchema rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.id -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.id">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+        <propertyType>Integer</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.name -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.name">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.photoUrls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet.photoUrls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Property"/>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#post-transfers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#post-transfers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Operations"/>
+        <hasOutput rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.output.200"/>
+        <hasRequestBody rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody"/>
+        <hasMethod>Put</hasMethod>
+        <hasPath>/pet</hasPath>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.output.200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.output.200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Output"/>
+        <hasOutputContent rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#petUpdate.output.application/xml"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#RequestBody"/>
+        <hasRequestBodyContent rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody.application/json"/>
+        <hasRequestBodyContent rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody.application/xml"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.response.200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.response.200"/>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByTags.output.application/xml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#findPetsByTags.output.application/xml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content"/>
+        <hasSchemas rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#petUpdate.output.application/xml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#petUpdate.output.application/xml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content"/>
+        <outputMediaType>application/xml</outputMediaType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody.application/json -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody.application/json">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content"/>
+        <hasContentSchema rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody.application/xml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#updatePet.requestBody.application/xml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#Content"/>
+        <hasContentSchema rdf:resource="http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100#pet"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

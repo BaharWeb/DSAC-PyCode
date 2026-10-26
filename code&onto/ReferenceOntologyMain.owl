@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://vsr.informatik.tu-chemnitz.de/ontologies/Reference_ontology#"
+     xml:base="https://vsr.informatik.tu-chemnitz.de/ontologies/Reference_ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ReferenceOntology="https://vsr.informatik.tu-chemnitz.de/ontologies/Reference_ontology#">
+    <owl:Ontology rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/Reference_ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ReferenceOntology:hasAnnotation -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasAnnotation">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:API"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:SemanticAnnotation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasOoutputSchema -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasOoutputSchema">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:OContent"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasOperations -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasOperations">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:API"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Operations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasOutput">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Operations"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasOutputContent -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasOutputContent">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Output"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:OContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasParameter">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Operations"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasParameterSchema -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasParameterSchema">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Parameter"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasProperties -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasProperties">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Schema"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasRBSchema -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasRBSchema">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:RBContent"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasRequestBody -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasRequestBody">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Operations"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:RequestBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasRequestBodyContent -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasRequestBodyContent">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:RequestBody"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:RBContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasSchemas -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasSchemas">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:API"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasServer -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:hasServer">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:API"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Servers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ReferenceOntology:referesToSchema -->
+
+    <owl:ObjectProperty rdf:about="http://ReferenceOntology:referesToSchema">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Schema"/>
+        <rdfs:range rdf:resource="http://ReferenceOntology:Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ReferenceOntology:hasAssociatedConcept -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:hasAssociatedConcept">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:SemanticAnnotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:hasDescription">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasDomain -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:hasDomain">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:SemanticAnnotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:hasMethod">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasPath -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:hasPath">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:hasURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:hasURL">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Servers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:outputMediaType -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:outputMediaType"/>
+    
+
+
+    <!-- http://ReferenceOntology:parameterDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:parameterDescription">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:parameterLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:parameterLocation">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:parameterName -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:parameterName">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:parameterType -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:parameterType">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:propertyDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:propertyDescription">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:propertyName -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:propertyName">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:propertyType -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:propertyType">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:requestBodyMediaType -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:requestBodyMediaType">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:RequestBody"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ReferenceOntology:schemaType -->
+
+    <owl:DatatypeProperty rdf:about="http://ReferenceOntology:schemaType">
+        <rdfs:domain rdf:resource="http://ReferenceOntology:Schema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ReferenceOntology:API -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:API"/>
+    
+
+
+    <!-- http://ReferenceOntology:OContent -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:OContent"/>
+    
+
+
+    <!-- http://ReferenceOntology:Operations -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:Operations"/>
+    
+
+
+    <!-- http://ReferenceOntology:Output -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:Output"/>
+    
+
+
+    <!-- http://ReferenceOntology:Parameter -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:Parameter"/>
+    
+
+
+    <!-- http://ReferenceOntology:Property -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:Property"/>
+    
+
+
+    <!-- http://ReferenceOntology:RBContent -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:RBContent"/>
+    
+
+
+    <!-- http://ReferenceOntology:RequestBody -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:RequestBody"/>
+    
+
+
+    <!-- http://ReferenceOntology:Schema -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:Schema"/>
+    
+
+
+    <!-- http://ReferenceOntology:SemanticAnnotation -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:SemanticAnnotation"/>
+    
+
+
+    <!-- http://ReferenceOntology:Servers -->
+
+    <owl:Class rdf:about="http://ReferenceOntology:Servers"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

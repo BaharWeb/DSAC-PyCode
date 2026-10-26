@@ -1,0 +1,631 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#"
+     xml:base="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:WeatherAPI="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#">
+    <owl:Ontology rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasAnnotation -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasAnnotation">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#API"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#SemanticAnnotation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasAssociatedConcept -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasAssociatedConcept">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#SemanticAnnotation"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasDomain -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasDomain">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#SemanticAnnotation"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasOoutputSchema -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasOoutputSchema">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#OContent"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasOperations -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasOperations">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#API"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasOutput">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasOutputContent -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasOutputContent">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Output"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#OContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasParameter">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasParameterSchema -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasParameterSchema">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasProperties -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasProperties">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasRBSchema -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasRBSchema">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RBContent"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasRequestBody -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasRequestBody">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RequestBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasRequestBodyContent -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasRequestBodyContent">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RequestBody"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RBContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasSchemas -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasSchemas">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#API"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasServer -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasServer">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#API"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Servers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#referesToSchema -->
+
+    <owl:ObjectProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#referesToSchema">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+        <rdfs:range rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasAssociatedConcept -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasAssociatedConcept"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasDescription">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasDomain -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasDomain"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasMethod">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasPath -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasPath">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasURL -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#hasURL">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Servers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#outputMediaType -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#outputMediaType"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#parameterDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#parameterDescription">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#parameterLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#parameterLocation">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#parameterName -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#parameterName">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#parameterType -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#parameterType">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#propertyDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#propertyDescription">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#propertyName -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#propertyName">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#propertyType -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#propertyType">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#requestBodyMediaType -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#requestBodyMediaType">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RequestBody"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#schemaType -->
+
+    <owl:DatatypeProperty rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#schemaType">
+        <rdfs:domain rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#API -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#API"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#OContent -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#OContent"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Output -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Output"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RBContent -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RBContent"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RequestBody -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#RequestBody"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#SemanticAnnotation -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#SemanticAnnotation"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Servers -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Servers"/>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#string -->
+
+    <owl:Class rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#InterzoidGetWeatherByZipCodeAPI -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#InterzoidGetWeatherByZipCodeAPI">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#API"/>
+        <hasOperations rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode"/>
+        <hasServer rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#https://api.interzoid.com"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#domain -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#domain">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#SemanticAnnotation"/>
+        <hasDomain>&lt;owl:Ontology rdf:about=&quot;TravelDomainOntology&quot;/&gt;</hasDomain>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Operations"/>
+        <hasOutput rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200"/>
+        <hasParameter rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.license"/>
+        <hasParameter rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.zip"/>
+        <hasDescription>Use a US zip code to retrieve current weather information</hasDescription>
+        <hasMethod>get</hasMethod>
+        <hasPath>/getweatherzipcode</hasPath>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.license -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.license">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+        <parameterDescription>Your Interzoid license API key. Register at www.interzoid.com/register</parameterDescription>
+        <parameterLocation>query</parameterLocation>
+        <parameterName>license</parameterName>
+        <parameterType>string</parameterType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200 -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Output"/>
+        <hasOutputContent rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.application/json"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Schema"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.City"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Code"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Credits"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.RelativeHumidity"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.State"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.TempC"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.TempF"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.VisibilityMiles"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Weather"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.WindDir"/>
+        <hasProperties rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.WindMPH"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.City -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.City">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>City</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Code -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Code">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>Code</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Credits -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Credits">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>Credits</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.RelativeHumidity -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.RelativeHumidity">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>RelativeHumidity</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.State -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.State">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>State</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.TempC -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.TempC">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>TempC</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.TempF -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.TempF">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>TempF</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.VisibilityMiles -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.VisibilityMiles">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>VisibilityMiles</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Weather -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.Weather">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>Weather</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.WindDir -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.WindDir">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>WindDir</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.WindMPH -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema.WindMPH">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Property"/>
+        <propertyName>WindMPH</propertyName>
+        <propertyType>string</propertyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.zip -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.zip">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Parameter"/>
+        <parameterDescription>Zip code for weather information</parameterDescription>
+        <parameterLocation>query</parameterLocation>
+        <parameterName>zip</parameterName>
+        <parameterType>string</parameterType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#ontologyConcept -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#ontologyConcept">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#SemanticAnnotation"/>
+        <hasAssociatedConcept>Travel:Climate</hasAssociatedConcept>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.application/json -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.application/json">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#OContent"/>
+        <hasOoutputSchema rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#getweatherzipcode.output.200.schema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#https://api.interzoid.com -->
+
+    <owl:NamedIndividual rdf:about="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#https://api.interzoid.com">
+        <rdf:type rdf:resource="https://vsr.informatik.tu-chemnitz.de/ontologies/WeatherAPI#Servers"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

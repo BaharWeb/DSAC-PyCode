@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="http://www.semanticweb.org/baharehzarei/ontologies/2022/11/untitled-ontology-72" uri="ReferenceOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="duplicate:http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100" uri="test.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="duplicate:http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100" uri="ExampleReference.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="duplicate:http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100" uri="ReferenceOntologyMain.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="shadowed:http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100" uri="onto/Currency%20Exchange%20Rate.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="shadowed:http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100" uri="onto/GeoLocationTime.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="shadowed:http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100" uri="onto/NumberToAreaCode.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="shadowed:http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100" uri="onto/IPToLocation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1729171901774" name="shadowed:http://www.semanticweb.org/baharehzarei/ontologies/2023/0/untitled-ontology-100" uri="onto/WeatherAPI.owl"/>
+    </group>
+</catalog>
