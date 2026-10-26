@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Natural Language Mashup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+<!-- 
+    <link rel="import" href="bower_components/polymer/polymer.html">
+     <script src="bower_components/webcomponentsjs1/webcomponents-lite.js"></script>
+   <link rel="import" href="bower_components/google-map/google-map.html">
+    <link rel="import" href="bower_components/paper-weather/paper-weather.html">
+    <link rel="import" href="bower_components/google-map/google-map-marker.html">
+    <link rel="import" href="bower_components/nytimes-news-element.html">
+    <link rel="import" href="bower_components/SmartComponent.html">
+   <link rel="import" href="bower_components/AttributeLink.html">
+    <link rel="import" href="bower_components/google-geocoder-element.html">
+    <link rel="import" href="bower_components/youtube-video.html"> -->
+    <!-- <link rel="import" href="bower_components/current-weather-element.html"> -->
+
+  
+    <!-- <link rel="import" href="bower_components/weather-component.html">  -->
+  
+
+    <script type="module" src="bower_components/weather-component.js"></script>
+    <script type="module" src="bower_components/calender-component.js"></script>
+
+    <!-- <script src="bower_components/apibundle.js"></script> -->
+    
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.4/main.min.css" rel="stylesheet">
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.4/main.min.js"></script>
+    
+
+<style>
+  google-map {
+    height: 300px;
+    width: 400px;
+  }
+</style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">NL Mashup</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+
+          <ul class="nav nav-sidebar">
+            <li ><a href="http://localhost:8080/index.html">Solution Overview</a></li>
+            <li><a href="http://localhost:8000/dsource">Domain Model</a></li>
+            <li class="active"><a href="http://localhost:8080/component.html">APIs <span class="sr-only">(current)</span></a></li>
+            <li><a href="/nlanlayse">API Discovery ChatBot</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header"></h1>
+
+         <!-- <some-content>
+          <fieldset class="w50">
+            <legend>Navigate the map!</legend>
+           <google-map id="gmap1" fit-to-markers api-key="AIzaSyC7ZXOxg0uAqI8-IOySkyPnmEhcLkk3ocE">
+               <google-map-marker latitude="37.78" longitude="-122.4" draggable="true"></google-map-marker>
+              </google-map>
+          </fieldset>
+        </some-content>
+  -->
+        <!-- <some-content>
+          <fieldset class="w50">
+            <legend>Weather</legend>
+            <paper-weather list unit="f" location="Santa Barbara, CA"></paper-weather>
+          </fieldset>
+        </some-content>  -->
+
+        <some-content>
+          <fieldset class="w50">
+            <legend><b>Agenda</b></legend>
+            <calendar-element id="calendarComp"></calendar-element>
+          </fieldset>
+        </some-content>
+
+        <some-content>
+          <fieldset class="w50">
+            <Legend>Scholarly Search</Legend>
+            <input type="text" id="query" placeholder="Enter search query">
+            <button onclick="searchScholar()">Search</button>
+        
+            <div id="results"></div>
+        </fieldset>
+        </some-content>
+
+         <some-content>
+          <fieldset class="w50">
+            <legend>Video</legend>
+            <youtube-video video-id="dQw4w9WgXcQ" autoplay start="30"></youtube-video>
+             </fieldset>
+        </some-content> 
+
+        <some-content>
+          <fieldset class="w50">
+            <legend>WeatherAPI</legend>
+            <weather-element></weather-element>
+          </fieldset>
+        </some-content>
+
+        <!-- <some-content>
+          <fieldset class="w50">
+            <legend>Some Numeric Input Options</legend>
+            <input id="inpTest" type="text" value="50" onchange="this.setAttribute('value', this.value)"><br><br>
+            <input id="inpTest2" type="range" min="0" max="100" value="50" onchange="this.setAttribute('value', this.value)">
+          </fieldset>
+        </some-content> -->
+
+
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--the chart and input connector-->
+    <attribute-link source="#inpTest@value" target="#chart1@value"></attribute-link>
+    <attribute-link source="#inpTest@value" target="#chart2@value"></attribute-link>
+    <attribute-link source="#inpTest@value" target="#inpTest2@value"></attribute-link>
+    <attribute-link source="#inpTest2@value" target="#inpTest@value"></attribute-link>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+<!-- <script>
+  marker.addListener('click', function() {
+          map.setZoom(8);
+          
+          console.log(map.setCenter(marker.getPosition()));
+        });
+</script> -->
+<script>
+  const calendarComponent = document.querySelector('#calendarComp');
+  calendarComponent.events = [
+  {
+    title: 'Opening Keynote',
+    start: '2022-11-28T09:00:00', // Monday, 9:00 AM
+    end: '2022-11-28T10:30:00',
+  },
+  {
+    title: 'Workshop: TBD',
+    start: '2022-11-28T11:00:00', // Monday, 11:00 AM
+    end: '2022-11-28T12:30:00',
+  },
+  {
+    title: 'Networking Break',
+    start: '2022-11-28T12:30:00', // Monday, 12:30 PM
+    end: '2022-11-28T13:00:00',
+  },
+  {
+    title: 'Lunch',
+    start: '2022-11-28T13:00:00', // Monday, 1:00 PM
+    end: '2022-11-28T14:00:00',
+  },
+  {
+    title: 'Panel Discussion: Future of Research',
+    start: '2022-11-28T14:30:00', // Monday, 2:30 PM
+    end: '2022-11-28T16:00:00',
+  },
+  {
+    title: 'Talk Session: TBD',
+    start: '2022-11-29T09:00:00', // Tuesday, 9:00 AM
+    end: '2022-11-29T10:30:00',
+  },
+  {
+    title: 'Workshop: Writing Research Papers',
+    start: '2022-11-29T11:00:00', // Tuesday, 11:00 AM
+    end: '2022-11-29T12:30:00',
+  },
+  {
+    title: 'Coffee Break',
+    start: '2022-11-29T12:30:00', // Tuesday, 12:30 PM
+    end: '2022-11-29T13:00:00',
+  },
+  {
+    title: 'Talk Session: Climate Change Impact',
+    start: '2022-11-30T09:00:00', // Wednesday, 9:00 AM
+    end: '2022-11-30T10:30:00',
+  },
+  {
+    title: 'Lunch',
+    start: '2022-11-30T12:00:00', // Wednesday, 12:00 PM
+    end: '2022-11-30T13:00:00',
+  },
+  {
+    title: 'Networking Break',
+    start: '2022-12-01T12:30:00', // Thursday, 12:30 PM
+    end: '2022-12-01T13:00:00',
+  },
+  {
+    title: 'Closing Keynote',
+    start: '2022-12-01T15:00:00', // Friday, 3:00 PM
+    end: '2022-12-01T16:30:00',
+  },
+  ];
+  
+  async function searchScholar() {
+            const query = document.getElementById('query').value;
+            if (!query) {
+                alert('Please enter a query!');
+                return;
+            }
+
+            const response = await fetch(`http://localhost:8000/search_scholar?query=${encodeURIComponent(query)}`);
+            const data = await response.json();
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            if (response.ok) {
+                data.forEach(item => {
+                    const resultHTML = `
+                        <div>
+                            <h3>${item.title}</h3>
+                            <p><strong>Author:</strong> ${item.author}</p>
+                            <p><strong>Abstract:</strong> ${item.abstract}</p>
+                            <a href="${item.url}" target="_blank">Read More</a>
+                        </div>
+                        <hr>
+                    `;
+                    resultsDiv.innerHTML += resultHTML;
+                });
+            } else {
+                resultsDiv.innerHTML = `<p style="color: red;">Error: ${data.error}</p>`;
+            }
+        }
+
+</script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <!-- image placeholer in browser-->
+    <script src="../../js/holder.min.js"></script> 
+
+
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  </body>
+</html>

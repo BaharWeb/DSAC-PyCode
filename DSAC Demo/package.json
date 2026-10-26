@@ -1,0 +1,30 @@
+{
+  "name": "mashup-demo",
+  "version": "1.0.0",
+  "description": "Here you find the codes and results of ICWE2018 Demo paper \"Natural-Language-Enabled End-User Tool Endowed with Ontology-based Development\". this mashup demo is based on the Smart Composition platform and web components. The user is able to express his intention in natural language and by applying the NLP techniques on the input the platform will be able to create a mashup from available components based on the user's intention. This demo is running on 2 servers for the sake of better encapsulation. The node.js server is responsible for running the main Smart composition framework and web components while the python server running the application interface and NLP components.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@polymer/polymer": "^3.5.1",
+    "finalhandler": "^1.2.0",
+    "formidable": "^2.1.1",
+    "jsonfile": "^6.1.0",
+    "lit": "^2.7.4",
+    "lit-element": "^3.3.2",
+    "polymer": "^0.5.0",
+    "polymer-cli": "^1.9.11",
+    "request": "^2.88.2",
+    "serve-static": "^1.15.0",
+    "superagent": "^8.0.9"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.2.1",
+    "bower": "^1.8.14"
+  }
+}
